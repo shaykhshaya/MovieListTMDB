@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ProgressSmallRed">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bg_progress_small_red</item>
+    </style>
+    <style name="ProgressSmallYellow">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bg_progress_small_yellow</item>
+    </style>
+    <style name="ProgressSmallGreen">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bg_progress_small_green</item>
+    </style>
+
+    <style name="ProgressLargeRed">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bg_progress_big_red</item>
+    </style>
+    <style name="ProgressLargeYellow">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bg_progress_big_yellow</item>
+    </style>
+    <style name="ProgressLargeGreen">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bg_progress_big_green</item>
+    </style>
+
+
+</resources>

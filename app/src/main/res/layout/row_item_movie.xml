@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_outline_curved"
+    tools:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_movie"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/iv_sample" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/white_alpha_80"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_dots_hori"
+                app:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_circle"
+        android:elevation="10dp"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_parent"
+        app:layout_constraintStart_toStartOf="@id/cv_parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_parent">
+
+        <ProgressBar
+            android:id="@+id/profile_loader_red"
+            style="@style/ProgressSmallRed"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:progress="80"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/cl_progress"
+            app:layout_constraintEnd_toEndOf="@id/cl_progress"
+            app:layout_constraintStart_toStartOf="@id/cl_progress"
+            app:layout_constraintTop_toTopOf="@id/cl_progress"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/profile_loader_yellow"
+            style="@style/ProgressSmallYellow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:progress="80"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/cl_progress"
+            app:layout_constraintEnd_toEndOf="@id/cl_progress"
+            app:layout_constraintStart_toStartOf="@id/cl_progress"
+            app:layout_constraintTop_toTopOf="@id/cl_progress" />
+
+        <ProgressBar
+            android:id="@+id/profile_loader_green"
+            style="@style/ProgressSmallGreen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:progress="80"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/cl_progress"
+            app:layout_constraintEnd_toEndOf="@id/cl_progress"
+            app:layout_constraintStart_toStartOf="@id/cl_progress"
+            app:layout_constraintTop_toTopOf="@id/cl_progress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_percent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/cl_progress"
+            app:layout_constraintTop_toTopOf="@id/cl_progress"
+            tools:text="95" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:includeFontPadding="false"
+            android:text="%"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_progress"
+            app:layout_constraintTop_toTopOf="@id/tv_progress"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingStart="0dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:fontFamily="@font/semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/cl_progress"
+        app:layout_constraintTop_toBottomOf="@id/cl_progress"
+        tools:text="Mayday" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:paddingTop="0dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white_alpha_90"
+        android:textSize="12sp"
+        app:fontFamily="@font/light"
+        app:layout_constraintStart_toStartOf="@id/tv_movie_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_name"
+        tools:text="Sep 03, 2003" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

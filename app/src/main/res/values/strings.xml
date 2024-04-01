@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MoviesListApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_now_streaming">Now Streaming</string>
+    <string name="label_watch_now">Watch Now</string>
+    <string name="label_15">15</string>
+    <string name="label_user_nscore">User \nScore</string>
+    <string name="label_what_s_your_vibe">What\'s your Vibe?</string>
+    <string name="label_play_trailer">Play Trailer</string>
+    <string name="label_overview">Overview</string>
+    <string name="label_dummy_description">The Pritchet-Dunphy-Tucker clan is a wonderfully large and blended family. They give us an honest and often hilarious look into the sometimes warm, sometimes twisted, embrace of the modern family.</string>
+    <string name="label_date">Sep 03, 2003</string>
+    <string name="label_title">Mayday</string>
+</resources>
